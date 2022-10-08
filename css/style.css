@@ -28,8 +28,10 @@ portfolio #212121 Roboto 500
    --white-color: #FFFFFF;
    --section-background: #F5F4FA;
    --btn-hover-color: #188CE8;
-   --hero-background: #2F303A;
+   --hero-background: #C4C4C4;
    --logo-dark-color: #000000;
+   --hero-background-gradient: rgba(47, 48, 58, 0.4);
+   --footer-background: #2F303A;
  }
 
 body {
@@ -135,7 +137,8 @@ img {
    margin-left: 50px;
 }
 .contact .contact-link {
-   display: block;
+   display: inline-flex;
+   align-items: center;
    padding-top: 32px;
    padding-bottom: 32px;
    color: var(--primary-text-color);
@@ -145,12 +148,28 @@ img {
    letter-spacing: 0.02em;
    text-decoration: none;
 }
+.contact-mailto::before {
+   content: "";
+   width: 16px;
+   height: 12px;
+   margin-right: 10px;
+   background-image: url(../images/envelope.svg);
+   background-size: contain;
+}
+.contact-phone::before {
+   content: "";
+   width: 10px;
+   height: 16px;
+   margin-right: 10px;
+   background-image: url(../images/smartphone.svg);
+   background-size: contain;
+}
 
 /* footer */
 .address {
    padding-top: 60px;
    padding-bottom: 60px;
-   background-color: var(--hero-background);
+   background-color: var(--footer-background);
 }
 .address-item {
    margin-top: 20px;
@@ -187,6 +206,18 @@ img {
    background-color: var(--hero-background);
    text-align: center;
 }
+.overlay {
+   max-width: 1600px;
+   height: 600px;
+   margin-left: auto;
+   margin-right: auto;
+   background-image:url(../images/Img\ Overlay.svg),
+   url(../images/hero-background.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
 .hero-title {
    margin-bottom: 30px;
    color: var(--white-color);
@@ -256,12 +287,36 @@ img {
 .features {
    display: flex;
 }
-.features .item + .item {
+.features-item + .features-item {
    margin-left: 30px;
 }
-.features .item {
+.features-item {
    width: 270px;
 }
+.features-item::before {
+   display: block;
+   content: "";
+   height: 120px;
+   background-color: var(--section-background);
+   background-size: 70px, contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   margin-bottom: 30px;
+   border-radius: 4px;
+}
+.icon-antenna::before {
+   background-image: url(../images/antenna\ 1.svg);
+}
+.icon-clock::before {
+   background-image: url(../images/clock\ 1.svg);
+}
+.icon-diagram::before {
+   background-image: url(../images/diagram\ 1.svg);
+}
+.icon-astronaut::before {
+   background-image: url(../images/astronaut\ 1.svg);
+}
+
 .features p {
    font-size: 14px;
    line-height: 1.71;
