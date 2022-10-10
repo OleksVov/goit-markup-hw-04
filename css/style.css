@@ -155,8 +155,12 @@ img {
    letter-spacing: 0.02em;
    text-decoration: none;
 }
+.icon-contact-link {
+   display: inline-flex;
+   align-items: center;
+}
 .icon-contact {
-   fill: red;
+   fill: var(--primary-text-color);
 }
 .icon-contact:hover,
 .icon-contact:focus {
