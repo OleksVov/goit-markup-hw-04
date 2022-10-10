@@ -32,7 +32,8 @@ portfolio #212121 Roboto 500
    --logo-dark-color: #000000;
    --hero-background-gradient: rgba(47, 48, 58, 0.4);
    --footer-background: #2F303A;
-   --client-border: #AFB1B8;
+   --icon-color: #AFB1B8;
+   --social-link-background: rgba(255, 255, 255, 0.1)
  }
 
 body {
@@ -154,23 +155,13 @@ img {
    letter-spacing: 0.02em;
    text-decoration: none;
 }
-
-/* .contact-mailto::before {
-   content: "";
-   width: 16px;
-   height: 12px;
-   margin-right: 10px;
-   background-image: url(../images/envelope.svg);
-   background-size: contain;
+.icon-contact {
+   fill: red;
 }
-.contact-phone::before {
-   content: "";
-   width: 10px;
-   height: 16px;
-   margin-right: 10px;
-   background-image: url(../images/smartphone.svg);
-   background-size: contain;
-} */
+.icon-contact:hover,
+.icon-contact:focus {
+   fill: var(--accent-text-color);
+}
 
 /* footer */
 .address {
@@ -209,7 +200,7 @@ img {
 .footer {
    display: flex;
 }
-.join {
+.footer-social {
    padding: 12px 0;
    margin-left: 70px;
 }
@@ -220,6 +211,13 @@ img {
    line-height: 1.14;
    letter-spacing: 0.03em;
    text-transform: uppercase;
+}
+.social-link {
+   border-radius: 50%;
+   background-color: var(--social-link-background);
+}
+.social-link .social-network {
+   fill: var(--white-color);
 }
 
 /* hero */
@@ -416,11 +414,10 @@ img {
    background-color: var(--accent-text-color);
 }
 .social-network {
-   fill: #AFB1B8;
+   fill: var(--icon-color);
 }
 .social-network:hover {
    fill: var(--white-color);
-   /* stroke: var(--white-color); */
 }
 
 /* regular customers */
@@ -431,12 +428,22 @@ img {
    justify-content: center;
 }
 .client-item{
+   display: flex;
    margin-right: 30px;
    padding: 16px 32px;
    width: 170px;
    background-color: var(--white-color);
-   border: 1px solid var(--client-border);
+   border: 1px solid var(--icon-color);
    border-radius: 4px;
+}
+.client-icon {
+   fill: var(--icon-color);
+}
+.client-item:hover {
+   border-color: var(--accent-text-color);
+}
+.client-icon:hover {
+   fill: var(--accent-text-color);
 }
 
 /* portfolio button */
