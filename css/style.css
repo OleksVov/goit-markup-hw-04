@@ -153,19 +153,22 @@ img {
    color: var(--primary-text-color);
    font-weight: 500;
    font-size: 14px;
+   fill: currentColor;
    line-height: 1.14;
    letter-spacing: 0.02em;
    text-decoration: none;
 }
-
+.contact-link:hover,
+.contact-link:focus {
+   color: var(--accent-text-color);
+}
 .icon-contact {
    margin-right: 10px;
-   fill: var(--primary-text-color);
 }
-.icon-contact:hover,
+/* .icon-contact:hover,
 .icon-contact:focus {
    fill: var(--accent-text-color);
-}
+} */
 
 /* footer */
 .address {
@@ -194,10 +197,6 @@ img {
    text-decoration: none;
 }
 
-.contact-link:hover,
-.contact-link:focus {
-   color: var(--accent-text-color);
-}
 .mailto {
    margin: 9px 0;
 }
@@ -235,7 +234,10 @@ img {
    height: 600px;
    margin-left: auto;
    margin-right: auto;
-   background-image:url(../images/Img\ Overlay.svg),
+   background-image:linear-gradient(
+      to right,
+      var(--hero-background-gradient),
+      var(--hero-background-gradient)),
    url(../images/hero-background.jpg);
    background-position: center;
    background-size: cover;
@@ -316,30 +318,15 @@ img {
 .features-item {
    width: 270px;
 }
-.features-item::before {
-   display: block;
-   content: "";
+.features-icon {
+   display: flex;
    height: 120px;
-   background-color: var(--section-background);
-   background-size: 70px, contain;
-   background-repeat: no-repeat;
-   background-position: center;
+   justify-content: center;
+   align-items: center;
    margin-bottom: 30px;
-   border-radius: 4px;
+   background-color: var(--section-background);
+   border-radius: 4px
 }
-.icon-antenna::before {
-   background-image: url(../images/antenna\ 1.svg);
-}
-.icon-clock::before {
-   background-image: url(../images/clock\ 1.svg);
-}
-.icon-diagram::before {
-   background-image: url(../images/diagram\ 1.svg);
-}
-.icon-astronaut::before {
-   background-image: url(../images/astronaut\ 1.svg);
-}
-
 .features p {
    font-size: 14px;
    line-height: 1.71;
