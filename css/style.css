@@ -165,10 +165,6 @@ img {
 .icon-contact {
    margin-right: 10px;
 }
-/* .icon-contact:hover,
-.icon-contact:focus {
-   fill: var(--accent-text-color);
-} */
 
 /* footer */
 .address {
@@ -215,13 +211,13 @@ img {
    letter-spacing: 0.03em;
    text-transform: uppercase;
 }
-.social-link {
+/* .social-link {
    border-radius: 50%;
    background-color: var(--social-link-background);
 }
 .social-link .social-network {
    fill: var(--white-color);
-}
+} */
 
 /* hero */
 .hero {
@@ -387,23 +383,18 @@ img {
    margin-right: 10px;
 
 }
-.social-item a {
-   display: flex;
+.social-link {
+   display:inline-flex;
    justify-content: center;
    align-items: center;
+   fill: var(--icon-color);
    width: 44px;
    height: 44px;
-}
-.social-item a:hover,
-.social-item a:focus {
    border-radius: 50%;
+}
+.social-link:hover,
+.social-link:focus {
    background-color: var(--accent-text-color);
-}
-.social-network {
-   fill: var(--icon-color);
-}
-.social-network:hover,
-.social-network:focus {
    fill: var(--white-color);
 }
 
