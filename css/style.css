@@ -196,14 +196,14 @@ img {
 .mailto {
    margin: 9px 0;
 }
-.footer {
+.box-footer {
    display: flex;
+   align-items: baseline;
 }
-.footer-social {
-   padding: 12px 0;
+.box-action {
    margin-left: 70px;
 }
-.caption {
+.action {
    margin-bottom: 20px;
    color: var(--white-color);
    font-size: 14px;
@@ -211,13 +211,13 @@ img {
    letter-spacing: 0.03em;
    text-transform: uppercase;
 }
-/* .social-link {
+.action-link {
    border-radius: 50%;
    background-color: var(--social-link-background);
 }
-.social-link .social-network {
+.social-network {
    fill: var(--white-color);
-} */
+}
 
 /* hero */
 .hero {
@@ -405,22 +405,25 @@ img {
    margin-right: -30px;
    justify-content: center;
 }
-.client-item{
-   display: flex;
+.client-item {
    margin-right: 30px;
-   padding: 16px 32px;
    width: 170px;
-   background-color: var(--white-color);
+   height: 92px;
+   
+}
+.client-link {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   fill: var(--icon-color);
    border: 1px solid var(--icon-color);
    border-radius: 4px;
 }
-.client-icon {
-   fill: var(--icon-color);
-}
-.client-item:hover {
+.client-link:hover,
+.client-link:focus {
    border-color: var(--accent-text-color);
-}
-.client-icon:hover {
    fill: var(--accent-text-color);
 }
 
@@ -478,17 +481,18 @@ img {
    line-height: 2;
    letter-spacing: 0.06em;
 }
-.portfolio p {
+.portfolio-text {
    color: var(--primary-text-color);
    font-size: 16px;
    line-height: 1.88;
    letter-spacing: 0.03em;
 }
-.portfolio a {
+.project-link {
+   display: block;
    background-color: var(--white-color);
    text-decoration: none;
 }
-.project:hover {
-   /* border: 1px solid #EEEEEE; */
+.project-link:hover,
+.project-link:focus {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
