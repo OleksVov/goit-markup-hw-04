@@ -141,11 +141,11 @@ img {
    margin-left: 50px;
 }
 .contact .item {
-   display: inline-flex;
+   display: flex;
    align-items: center;
 }
 .contact .contact-link {
-   display: inline-flex;
+   display: flex;
    align-items: center;
    margin-left: 10px;
    padding-top: 32px;
@@ -384,7 +384,7 @@ img {
 
 }
 .social-link {
-   display:inline-flex;
+   display: flex;
    justify-content: center;
    align-items: center;
    fill: var(--icon-color);
